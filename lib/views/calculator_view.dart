@@ -41,12 +41,12 @@ class _CalculatorViewState extends State<CalculatorView> {
   }
 
   void _onDetach() => log("Detached");
-  void _onHide() => log("Hidden");
-  void _onInactive() => log("Inactive");
-  void _onRestart() => log("Restart");
-  void _onResume() => log("Resume");
-  void _onShow() => log("Show");
-  void _onPause() => log("Paused");
+  void _onHide() => log("Hidden"); //
+  void _onInactive() => log("Inactive"); //
+  void _onRestart() => log("Restart"); //
+  void _onResume() => log("Resume"); //
+  void _onShow() => log("Show"); //
+  void _onPause() => log("Paused"); //
 
   @override
   Widget build(BuildContext context) {
