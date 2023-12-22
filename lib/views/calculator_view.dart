@@ -56,6 +56,7 @@ class _CalculatorViewState extends State<CalculatorView> {
         children: [
           //  Calculator display
           Display(
+            key: Key("displayOne"),
             hint: "Enter first number",
             controller: displayOneController,
             focused: true,
@@ -65,6 +66,7 @@ class _CalculatorViewState extends State<CalculatorView> {
           ),
           Display(
             hint: "Enter second number",
+            key: Key("displayTwo"),
             controller: displayTwoController,
             focused: false,
           ),

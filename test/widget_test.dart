@@ -18,5 +18,14 @@ void main() {
     expect(find.byIcon(CupertinoIcons.minus), findsOneWidget);
     expect(find.byIcon(CupertinoIcons.divide), findsOneWidget);
     expect(find.byIcon(CupertinoIcons.multiply), findsOneWidget);
+
+    // Advanced test case for the calculator
+    await tester.enterText(find.byKey(const Key("displayOne")), "20"); // Insert the value to the textfield one
+    await tester.enterText(find.byKey(const Key("displayTwo")), "30"); // Insert the value to the textfield two
+    await tester.tap(find.byIcon(CupertinoIcons.add)); // Clicked on the addition symboled button +
+
+    await tester.pump(); // Rebuild the app
+
+    expect(find.text("50"), findsOneWidget); // Find the actual result
   });
 }
